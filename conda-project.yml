@@ -1,0 +1,8 @@
+name: demo-stream
+environments:
+  prod:
+    - environment-prod.yml
+  dev:
+    - environment-dev.yml
+    - environment-prod.yml
+commands: {}
