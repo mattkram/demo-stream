@@ -31,7 +31,7 @@ repos:
     rev: 0.28.6
     hooks:
       - id: check-github-workflows
-#      - id: check-renovate
+      - id: check-renovate
   - repo: https://github.com/codespell-project/codespell
     rev: v2.3.0
     hooks:
