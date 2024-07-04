@@ -13,8 +13,8 @@
 version: 1
 metadata:
   content_hash:
-    osx-arm64: 0ebcb8fe2796944fd169e724eadacbb3d76ec146b98f8acca7604bb6e978f931
-    linux-64: 65db9000018ae7af22a4709679d5779e242d54c6333c0a6adb747421c8ddc046
+    osx-arm64: 838c155037d43e3bda6320f4998971563511428bd8330e64b0297f47b99887c7
+    linux-64: 66a95d5f741969ffe16f27b298c6e9b4d0282af1da57a864c0548f9fd7c6a487
   channels:
   - url: conda-forge
     used_env_vars: []
@@ -24,7 +24,7 @@ metadata:
   sources:
   - environment-prod.yml
   time_metadata:
-    created_at: '2024-07-04T04:02:26Z'
+    created_at: '2024-07-04T04:32:04Z'
 package:
 - name: _libgcc_mutex
   version: '0.1'
@@ -1061,7 +1061,7 @@ package:
   category: main
   optional: false
 - name: python
-  version: 3.12.4
+  version: 3.12.3
   manager: conda
   platform: linux-64
   dependencies:
@@ -1071,24 +1071,24 @@ package:
     libffi: '>=3.4,<4.0a0'
     libgcc-ng: '>=12'
     libnsl: '>=2.0.1,<2.1.0a0'
-    libsqlite: '>=3.46.0,<4.0a0'
+    libsqlite: '>=3.45.2,<4.0a0'
     libuuid: '>=2.38.1,<3.0a0'
     libxcrypt: '>=4.4.36'
-    libzlib: '>=1.3.1,<2.0a0'
-    ncurses: '>=6.5,<7.0a0'
-    openssl: '>=3.3.1,<4.0a0'
+    libzlib: '>=1.2.13,<2.0.0a0'
+    ncurses: '>=6.4.20240210,<7.0a0'
+    openssl: '>=3.2.1,<4.0a0'
     readline: '>=8.2,<9.0a0'
     tk: '>=8.6.13,<8.7.0a0'
     tzdata: ''
     xz: '>=5.2.6,<6.0a0'
-  url: https://conda.anaconda.org/conda-forge/linux-64/python-3.12.4-h194c7f8_0_cpython.conda
+  url: https://conda.anaconda.org/conda-forge/linux-64/python-3.12.3-hab00c5b_0_cpython.conda
   hash:
-    md5: d73490214f536cccb5819e9873048c92
-    sha256: 97a78631e6c928bf7ad78d52f7f070fcf3bd37619fa48dc4394c21cf3058cdee
+    md5: 2540b74d304f71d3e89c81209db4db84
+    sha256: f9865bcbff69f15fd89a33a2da12ad616e98d65ce7c83c644b92e66e5016b227
   category: main
   optional: false
 - name: python
-  version: 3.12.4
+  version: 3.12.3
   manager: conda
   platform: osx-arm64
   dependencies:
@@ -1096,18 +1096,18 @@ package:
     bzip2: '>=1.0.8,<2.0a0'
     libexpat: '>=2.6.2,<3.0a0'
     libffi: '>=3.4,<4.0a0'
-    libsqlite: '>=3.46.0,<4.0a0'
-    libzlib: '>=1.3.1,<2.0a0'
-    ncurses: '>=6.5,<7.0a0'
-    openssl: '>=3.3.1,<4.0a0'
+    libsqlite: '>=3.45.2,<4.0a0'
+    libzlib: '>=1.2.13,<2.0.0a0'
+    ncurses: '>=6.4.20240210,<7.0a0'
+    openssl: '>=3.2.1,<4.0a0'
     readline: '>=8.2,<9.0a0'
     tk: '>=8.6.13,<8.7.0a0'
     tzdata: ''
     xz: '>=5.2.6,<6.0a0'
-  url: https://conda.anaconda.org/conda-forge/osx-arm64/python-3.12.4-h30c5eda_0_cpython.conda
+  url: https://conda.anaconda.org/conda-forge/osx-arm64/python-3.12.3-h4a7b5fc_0_cpython.conda
   hash:
-    md5: e3e44e0e72aed46dcb810fa3e96784be
-    sha256: 107824b584eb5e43f71df8cb2741019f5c377c734f8309899aa2a6ed53b79a47
+    md5: 8643ab37bece6ae8f112464068d9df9c
+    sha256: c761fb3713ea66bce3889b33b6f400afb2dd192d1fc2686446e9d8166cfcec6b
   category: main
   optional: false
 - name: python-multipart
