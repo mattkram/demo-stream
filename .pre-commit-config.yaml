@@ -15,7 +15,12 @@ repos:
     rev: v24.5.2
     hooks:
       - id: generate-renovate-annotations
-        args: ["--disable-environment-creation", "--environment-selector", "-p ./envs/dev"]
+        args: [
+          "--create-command",
+          "conda project install --environment dev"
+          "--environment-selector",
+          "-p ./envs/dev",
+        ]
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.5.0
     hooks:
