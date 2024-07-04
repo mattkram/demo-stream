@@ -5,4 +5,10 @@ environments:
   dev:
     - environment-dev.yml
     - environment-prod.yml
-commands: {}
+commands:
+  test:
+    cmd: pytest
+    environment: dev
+    variables:
+      # This allows importing directly from the project root
+      PYTHONPATH: .
