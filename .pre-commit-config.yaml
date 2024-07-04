@@ -27,10 +27,10 @@ repos:
     hooks:
       - id: pretty-format-toml
         args: [--autofix]
-#  - repo: https://github.com/python-jsonschema/check-jsonschema
-#    rev: 0.28.6
-#    hooks:
-#      - id: check-github-workflows
+  - repo: https://github.com/python-jsonschema/check-jsonschema
+    rev: 0.28.6
+    hooks:
+      - id: check-github-workflows
 #      - id: check-renovate
   - repo: https://github.com/codespell-project/codespell
     rev: v2.3.0
