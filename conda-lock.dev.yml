@@ -13,8 +13,8 @@
 version: 1
 metadata:
   content_hash:
-    osx-arm64: b19b0cfcad859ce5bfe15fc775d2774abd49c9cf7b4d7b582426c56ee04d5880
-    linux-64: d205aef86a47b6c2cc49ddc9dd93a29d21d58963852b4fd19e220c891bcee935
+    osx-arm64: c1bb815112020ab4e44e0a6476be302d7e319a792d7894563ea07a2ccac28080
+    linux-64: 35e4571459ccbc020d7ad846ef36d13393620466c69e0a6524e147bacacd4b83
   channels:
   - url: conda-forge
     used_env_vars: []
@@ -25,7 +25,7 @@ metadata:
   - environment-dev.yml
   - environment-prod.yml
   time_metadata:
-    created_at: '2024-07-04T04:32:23Z'
+    created_at: '2024-07-04T05:14:26Z'
 package:
 - name: _libgcc_mutex
   version: '0.1'
@@ -1395,7 +1395,7 @@ package:
   category: main
   optional: false
 - name: pytest
-  version: 7.4.4
+  version: 8.2.2
   manager: conda
   platform: linux-64
   dependencies:
@@ -1403,17 +1403,17 @@ package:
     exceptiongroup: '>=1.0.0rc8'
     iniconfig: ''
     packaging: ''
-    pluggy: '>=0.12,<2.0'
-    python: '>=3.7'
-    tomli: '>=1.0.0'
-  url: https://conda.anaconda.org/conda-forge/noarch/pytest-7.4.4-pyhd8ed1ab_0.conda
+    pluggy: <2.0,>=1.5
+    python: '>=3.8'
+    tomli: '>=1'
+  url: https://conda.anaconda.org/conda-forge/noarch/pytest-8.2.2-pyhd8ed1ab_0.conda
   hash:
-    md5: a9d145de8c5f064b5fa68fb34725d9f4
-    sha256: 8979721b7f86b183d21103f3ec2734783847d317c1b754f462f407efc7c60886
+    md5: 0f3f49c22c7ef3a1195fa61dad3c43be
+    sha256: 00b7a49b31cf705b59edbd96219d8a67d2b9f51a913aa059fadd921b016965cb
   category: main
   optional: false
 - name: pytest
-  version: 7.4.4
+  version: 8.2.2
   manager: conda
   platform: osx-arm64
   dependencies:
@@ -1421,13 +1421,13 @@ package:
     exceptiongroup: '>=1.0.0rc8'
     iniconfig: ''
     packaging: ''
-    pluggy: '>=0.12,<2.0'
-    python: '>=3.7'
-    tomli: '>=1.0.0'
-  url: https://conda.anaconda.org/conda-forge/noarch/pytest-7.4.4-pyhd8ed1ab_0.conda
+    pluggy: <2.0,>=1.5
+    python: '>=3.8'
+    tomli: '>=1'
+  url: https://conda.anaconda.org/conda-forge/noarch/pytest-8.2.2-pyhd8ed1ab_0.conda
   hash:
-    md5: a9d145de8c5f064b5fa68fb34725d9f4
-    sha256: 8979721b7f86b183d21103f3ec2734783847d317c1b754f462f407efc7c60886
+    md5: 0f3f49c22c7ef3a1195fa61dad3c43be
+    sha256: 00b7a49b31cf705b59edbd96219d8a67d2b9f51a913aa059fadd921b016965cb
   category: main
   optional: false
 - name: pytest-asyncio
