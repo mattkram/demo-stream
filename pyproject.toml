@@ -1,3 +1,11 @@
+[tool.mypy]
+disallow_untyped_defs = true
+files = [
+  "main.py",
+  "tests/**/*.py"
+]
+python_version = "3.12"
+
 [tool.pytest.ini_options]
 addopts = []
 asyncio_mode = "auto"

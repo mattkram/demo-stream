@@ -21,6 +21,9 @@ jobs:
       - name: Install conda-project
         run: |
           conda install conda-project
+      - name: Run static type checks
+        run: |
+          conda project run type-check
       - name: Run tests
         run: |
           conda project run test
