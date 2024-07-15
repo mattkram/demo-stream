@@ -13,8 +13,8 @@
 version: 1
 metadata:
   content_hash:
-    osx-arm64: 1ac25d9d737a2b37182f3a336c6c60ea4b89823d5b8f6fb461f461ae37820a52
-    linux-64: 229f3e41f6e080a4aa293f18d9b2a6714257e3bb822e96a4180b2cdd7f703330
+    osx-arm64: 4d82888657989b0a3ce29f3f743b574ded83aaaac07fc710636ca688508f8be2
+    linux-64: 825105e68c037fb99bb77174a8bc3bb9dd58341a0ef4fbbe606cb15e155fb8ff
   channels:
   - url: conda-forge
     used_env_vars: []
@@ -25,7 +25,7 @@ metadata:
   - environment-dev.yml
   - environment-prod.yml
   time_metadata:
-    created_at: '2024-07-15T01:06:50Z'
+    created_at: '2024-07-15T01:07:47Z'
 package:
 - name: _libgcc_mutex
   version: '0.1'
@@ -412,7 +412,7 @@ package:
   category: main
   optional: false
 - name: fastapi
-  version: 0.111.1
+  version: 0.111.0
   manager: conda
   platform: linux-64
   dependencies:
@@ -420,20 +420,22 @@ package:
     fastapi-cli: '>=0.0.2'
     httpx: '>=0.23.0'
     jinja2: '>=2.11.2'
+    orjson: '>=3.2.1'
     pydantic: '>=1.7.4,!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0'
     python: '>=3.8'
     python-multipart: '>=0.0.7'
     starlette: '>=0.37.2,<0.38.0'
     typing-extensions: '>=4.8.0'
+    ujson: '>=4.0.1,!=4.0.2,!=4.1.0,!=4.2.0,!=4.3.0,!=5.0.0,!=5.1.0'
     uvicorn: '>=0.12.0'
-  url: https://conda.anaconda.org/conda-forge/noarch/fastapi-0.111.1-pyhd8ed1ab_0.conda
+  url: https://conda.anaconda.org/conda-forge/noarch/fastapi-0.111.0-pyhd8ed1ab_0.conda
   hash:
-    md5: d70b311ede031d219232e110c2355ac5
-    sha256: d3d40bae4267b68dc3325089f4da9db3d5a34b741da061e04ac3b6a7b27ef55e
+    md5: 7d347962e391cffc68f922c344f7cb3c
+    sha256: 98cc823775b794b6ce45f02af5e4b711065ed0787c8eaec027434dabdb308bf7
   category: main
   optional: false
 - name: fastapi
-  version: 0.111.1
+  version: 0.111.0
   manager: conda
   platform: osx-arm64
   dependencies:
@@ -441,16 +443,18 @@ package:
     fastapi-cli: '>=0.0.2'
     httpx: '>=0.23.0'
     jinja2: '>=2.11.2'
+    orjson: '>=3.2.1'
     pydantic: '>=1.7.4,!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0'
     python: '>=3.8'
     python-multipart: '>=0.0.7'
     starlette: '>=0.37.2,<0.38.0'
     typing-extensions: '>=4.8.0'
+    ujson: '>=4.0.1,!=4.0.2,!=4.1.0,!=4.2.0,!=4.3.0,!=5.0.0,!=5.1.0'
     uvicorn: '>=0.12.0'
-  url: https://conda.anaconda.org/conda-forge/noarch/fastapi-0.111.1-pyhd8ed1ab_0.conda
+  url: https://conda.anaconda.org/conda-forge/noarch/fastapi-0.111.0-pyhd8ed1ab_0.conda
   hash:
-    md5: d70b311ede031d219232e110c2355ac5
-    sha256: d3d40bae4267b68dc3325089f4da9db3d5a34b741da061e04ac3b6a7b27ef55e
+    md5: 7d347962e391cffc68f922c344f7cb3c
+    sha256: 98cc823775b794b6ce45f02af5e4b711065ed0787c8eaec027434dabdb308bf7
   category: main
   optional: false
 - name: fastapi-cli
@@ -1177,6 +1181,35 @@ package:
   hash:
     md5: c665dec48e08311096823956642a501c
     sha256: 3ab411856c3bef88595473f0dd86e82de4f913f88319548acf262d5b1175b050
+  category: main
+  optional: false
+- name: orjson
+  version: 3.10.6
+  manager: conda
+  platform: linux-64
+  dependencies:
+    __glibc: '>=2.17,<3.0.a0'
+    libgcc-ng: '>=12'
+    python: '>=3.12,<3.13.0a0'
+    python_abi: 3.12.*
+  url: https://conda.anaconda.org/conda-forge/linux-64/orjson-3.10.6-py312hf008fa9_0.conda
+  hash:
+    md5: 31f78eb9758c9f704bab1cb12ca00b48
+    sha256: b75eeeec4078a9982cbcfb3bffc926786e48d94b992bafab51faa3a9a87f675b
+  category: main
+  optional: false
+- name: orjson
+  version: 3.10.6
+  manager: conda
+  platform: osx-arm64
+  dependencies:
+    __osx: '>=11.0'
+    python: '>=3.12,<3.13.0a0'
+    python_abi: 3.12.*
+  url: https://conda.anaconda.org/conda-forge/osx-arm64/orjson-3.10.6-py312h552d48e_0.conda
+  hash:
+    md5: 21760e944229763111736e60171cea00
+    sha256: 5376ecebfa5c3a0a7a616bb750cab77b2adf43057385b06b530b495fa90a3c47
   category: main
   optional: false
 - name: packaging
@@ -1991,6 +2024,36 @@ package:
   hash:
     md5: 161081fc7cec0bfda0d86d7cb595f8d8
     sha256: 7b2b69c54ec62a243eb6fba2391b5e443421608c3ae5dbff938ad33ca8db5122
+  category: main
+  optional: false
+- name: ujson
+  version: 5.10.0
+  manager: conda
+  platform: linux-64
+  dependencies:
+    libgcc-ng: '>=12'
+    libstdcxx-ng: '>=12'
+    python: '>=3.12,<3.13.0a0'
+    python_abi: 3.12.*
+  url: https://conda.anaconda.org/conda-forge/linux-64/ujson-5.10.0-py312h7070661_0.conda
+  hash:
+    md5: dd19f5820a3fd57aea70aaf88e6dd191
+    sha256: 36c39df244b96e501300ff9f11fb9648e9d82ea8a33ebb9afa17795e08875c0d
+  category: main
+  optional: false
+- name: ujson
+  version: 5.10.0
+  manager: conda
+  platform: osx-arm64
+  dependencies:
+    __osx: '>=11.0'
+    libcxx: '>=16'
+    python: '>=3.12,<3.13.0a0'
+    python_abi: 3.12.*
+  url: https://conda.anaconda.org/conda-forge/osx-arm64/ujson-5.10.0-py312h5c2e7bc_0.conda
+  hash:
+    md5: 5180bca1279b8de7e757e5028db96300
+    sha256: 98a9502fa621ebf08c60717bf74773e2dbf13a833cad74a7f21c6a5c3186d424
   category: main
   optional: false
 - name: ukkonen
