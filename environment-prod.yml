@@ -7,7 +7,7 @@ dependencies:
   # renovate: datasource=conda depName=conda-forge/pip
   - pip=24.0
   # renovate: datasource=conda depName=conda-forge/fastapi
-  - fastapi=0.111.1
+  - fastapi=0.111.0
 variables:
 prefix:
 platforms:
