@@ -44,6 +44,10 @@ class Video(BaseModel):
         )
 
 
+class VideosListViewModel(BaseModel):
+    videos: list[Video]
+
+
 def _load_videos() -> list[Video]:
     return sorted(
         (Video.from_path(p) for p in VIDEOS_DIR.glob("*.mp4")),
@@ -54,14 +58,8 @@ def _load_videos() -> list[Video]:
 
 @app.get("/")
 async def home(request: Request) -> HTMLResponse:
-    videos = _load_videos()
-    return templates.TemplateResponse(
-        request=request,
-        name="home.html",
-        context={
-            "videos": videos,
-        },
-    )
+    model = VideosListViewModel(videos=_load_videos())
+    return templates.TemplateResponse(request=request, name="home.html", context=model.dict())
 
 
 @app.get("/healthz")
