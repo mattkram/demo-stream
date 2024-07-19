@@ -3,10 +3,10 @@ import re
 from contextvars import ContextVar
 from datetime import datetime
 from pathlib import Path
-from typing import Any
+from typing import Annotated, Any
 
 import jinja_partials
-from fastapi import FastAPI, Request, Response
+from fastapi import FastAPI, Header, Query, Request, Response
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
@@ -104,15 +104,14 @@ def template(name: str) -> Any:
 
 
 @app.get("/")
-async def home(order: str = "desc") -> HTMLResponse:
+async def home(
+    from_htmx: Annotated[str, Header(alias="hx-request")] = "",
+    order: Annotated[str, Query()] = "desc",
+) -> HTMLResponse:
     model = VideosListViewModel(videos=_load_videos(order=order))
+    if from_htmx:
+        return render_template("partials/videos_list.html", model=model)
     return render_template("home.html", model=model)
-
-
-@app.get("/home")
-@template("home.html")
-async def home2(order: str = "desc") -> VideosListViewModel:
-    return VideosListViewModel(videos=_load_videos(order=order))
 
 
 @app.get("/healthz")

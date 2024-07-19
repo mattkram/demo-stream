@@ -12,6 +12,18 @@
     Demo Stream
 </h1>
 
+<button hx-get="/?order=asc"
+        hx-target="#videos-list"
+        hx-swap="outerHTML">
+    Ascending
+</button>
+
+<button hx-get="/?order=desc"
+        hx-target="#videos-list"
+        hx-swap="outerHTML">
+    Descending
+</button>
+
 {{  render_partial("partials/videos_list.html", videos=videos) }}
 
 <script src="/static/js/htmx.min.js"></script>
