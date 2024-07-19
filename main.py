@@ -5,12 +5,15 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any
 
+import jinja_partials
 from fastapi import FastAPI, Request, Response
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from pydantic import BaseModel
 from starlette.middleware.base import BaseHTTPMiddleware, RequestResponseEndpoint
+
+templates = Jinja2Templates("tests/test_templates")
 
 VIDEOS_DIR = Path(__file__).parent / "videos"
 REQUEST_CTX_KEY = "request_id"
@@ -23,6 +26,7 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 app.mount("/videos", StaticFiles(directory="videos"), name="videos")
 
 templates = Jinja2Templates(directory="templates")
+jinja_partials.register_starlette_extensions(templates)
 
 
 def get_request() -> Request:
@@ -73,11 +77,11 @@ class VideosListViewModel(BaseModel):
     videos: list[Video]
 
 
-def _load_videos() -> list[Video]:
+def _load_videos(order: str) -> list[Video]:
     return sorted(
         (Video.from_path(p) for p in VIDEOS_DIR.glob("*.mp4")),
         key=lambda v: v.timestamp,
-        reverse=True,
+        reverse=(order == "desc"),
     )
 
 
@@ -100,15 +104,15 @@ def template(name: str) -> Any:
 
 
 @app.get("/")
-async def home() -> HTMLResponse:
-    model = VideosListViewModel(videos=_load_videos())
+async def home(order: str = "desc") -> HTMLResponse:
+    model = VideosListViewModel(videos=_load_videos(order=order))
     return render_template("home.html", model=model)
 
 
 @app.get("/home")
 @template("home.html")
-async def home2() -> VideosListViewModel:
-    return VideosListViewModel(videos=_load_videos())
+async def home2(order: str = "desc") -> VideosListViewModel:
+    return VideosListViewModel(videos=_load_videos(order=order))
 
 
 @app.get("/healthz")
