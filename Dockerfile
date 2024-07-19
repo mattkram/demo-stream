@@ -19,6 +19,7 @@ ENV PATH="/opt/env/bin:${PATH}"
 
 # Copy in the app code
 COPY static/ ./static
+COPY videos/ ./videos
 COPY templates/ ./templates
 COPY main.py ./
 
