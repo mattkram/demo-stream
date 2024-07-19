@@ -1,14 +1,21 @@
+import functools
 import re
+from contextvars import ContextVar
 from datetime import datetime
 from pathlib import Path
+from typing import Any
 
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, Request, Response
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from pydantic import BaseModel
+from starlette.middleware.base import BaseHTTPMiddleware, RequestResponseEndpoint
 
 VIDEOS_DIR = Path(__file__).parent / "videos"
+REQUEST_CTX_KEY = "request_id"
+
+_request_ctx_var: ContextVar[Request] = ContextVar(REQUEST_CTX_KEY, default=None)
 
 app = FastAPI()
 
@@ -16,6 +23,24 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 app.mount("/videos", StaticFiles(directory="videos"), name="videos")
 
 templates = Jinja2Templates(directory="templates")
+
+
+def get_request() -> Request:
+    return _request_ctx_var.get()
+
+
+class RequestContextMiddleware(BaseHTTPMiddleware):
+    async def dispatch(self, request: Request, call_next: RequestResponseEndpoint) -> Response:
+        request_id = _request_ctx_var.set(request)
+
+        response = await call_next(request)
+
+        _request_ctx_var.reset(request_id)
+
+        return response
+
+
+app.add_middleware(RequestContextMiddleware)
 
 
 class Video(BaseModel):
@@ -56,10 +81,34 @@ def _load_videos() -> list[Video]:
     )
 
 
+def render_template(name, model):
+    return templates.TemplateResponse(request=get_request(), name=name, context=model.dict())
+
+
+def template(name: str) -> Any:
+    """A decorator to convert a view model object into an HTML response, via Jinja2 template."""
+
+    def decorator(f):
+        @functools.wraps(f)
+        async def inner(*args: Any, **kwargs: Any):
+            model = await f(*args, **kwargs)
+            return render_template(name, model)
+
+        return inner
+
+    return decorator
+
+
 @app.get("/")
-async def home(request: Request) -> HTMLResponse:
+async def home() -> HTMLResponse:
     model = VideosListViewModel(videos=_load_videos())
-    return templates.TemplateResponse(request=request, name="home.html", context=model.dict())
+    return render_template("home.html", model=model)
+
+
+@app.get("/home")
+@template("home.html")
+async def home2() -> VideosListViewModel:
+    return VideosListViewModel(videos=_load_videos())
 
 
 @app.get("/healthz")
