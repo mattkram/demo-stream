@@ -12,16 +12,7 @@
     Demo Stream
 </h1>
 
-<div class="col-4 offset-4">
-    {% for video in videos %}
-        <h2>{{ video.title }}</h2>
-        <h5>{{ video.timestamp }}</h5>
-        <video src="{{ video.uri }}"
-               style="width: 100%"
-               controls>
-        </video>
-    {% endfor %}
-</div>
+{{  render_partial("partials/videos_list.html", videos=videos) }}
 
 <script src="/static/js/htmx.min.js"></script>
 <script src="/static/js/jquery-3.5.1.slim.min.js"></script>
