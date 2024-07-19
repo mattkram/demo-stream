@@ -10,6 +10,8 @@ dependencies:
   - fastapi=0.111.1
   # renovate: datasource=conda depName=conda-forge/jinja2
   - jinja2=3.1.4
+  - pip:
+      - jinja_partials
 variables:
 prefix:
 platforms:
