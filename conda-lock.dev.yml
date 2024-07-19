@@ -13,8 +13,8 @@
 version: 1
 metadata:
   content_hash:
-    osx-arm64: 1ac25d9d737a2b37182f3a336c6c60ea4b89823d5b8f6fb461f461ae37820a52
-    linux-64: 229f3e41f6e080a4aa293f18d9b2a6714257e3bb822e96a4180b2cdd7f703330
+    osx-arm64: a3a20afe626396423faf88ac13fcf2b1dcc69c1718569c6034395eecbaf57e72
+    linux-64: 3a93ddeb8b3af3ef6d068f69ec04ac964c89344212f6470acf4a7aafb5a5208b
   channels:
   - url: conda-forge
     used_env_vars: []
@@ -25,7 +25,7 @@ metadata:
   - environment-dev.yml
   - environment-prod.yml
   time_metadata:
-    created_at: '2024-07-15T01:10:41Z'
+    created_at: '2024-07-19T14:28:10Z'
 package:
 - name: _libgcc_mutex
   version: '0.1'
@@ -1158,12 +1158,13 @@ package:
   manager: conda
   platform: linux-64
   dependencies:
+    __glibc: '>=2.17,<3.0.a0'
     ca-certificates: ''
     libgcc-ng: '>=12'
-  url: https://conda.anaconda.org/conda-forge/linux-64/openssl-3.3.1-h4ab18f5_1.conda
+  url: https://conda.anaconda.org/conda-forge/linux-64/openssl-3.3.1-h4bc722e_2.conda
   hash:
-    md5: b1e9d076f14e8d776213fd5047b4c3d9
-    sha256: ff3faf8d4c1c9aa4bd3263b596a68fcc6ac910297f354b2ce28718a3509db6d9
+    md5: e1b454497f9f7c1147fdde4b53f1b512
+    sha256: b294b3cc706ad1048cdb514f0db3da9f37ae3fcc0c53a7104083dd0918adb200
   category: main
   optional: false
 - name: openssl
@@ -1173,10 +1174,10 @@ package:
   dependencies:
     __osx: '>=11.0'
     ca-certificates: ''
-  url: https://conda.anaconda.org/conda-forge/osx-arm64/openssl-3.3.1-hfb2fe0b_1.conda
+  url: https://conda.anaconda.org/conda-forge/osx-arm64/openssl-3.3.1-hfb2fe0b_2.conda
   hash:
-    md5: c665dec48e08311096823956642a501c
-    sha256: 3ab411856c3bef88595473f0dd86e82de4f913f88319548acf262d5b1175b050
+    md5: 9b551a504c1cc8f8b7b22c01814da8ba
+    sha256: dd7d988636f74473ebdfe15e05c5aabdb53a1d2a846c839d62289b0c37f81548
   category: main
   optional: false
 - name: packaging
@@ -1693,27 +1694,27 @@ package:
   category: main
   optional: false
 - name: setuptools
-  version: 70.3.0
+  version: 71.0.1
   manager: conda
   platform: linux-64
   dependencies:
     python: '>=3.8'
-  url: https://conda.anaconda.org/conda-forge/noarch/setuptools-70.3.0-pyhd8ed1ab_0.conda
+  url: https://conda.anaconda.org/conda-forge/noarch/setuptools-71.0.1-pyhd8ed1ab_0.conda
   hash:
-    md5: 693bb57e8f92120caa956898065f3627
-    sha256: 869ea7688c040911ac1050d5765fa1f3d8ea1858c9f9cecb0df136a2f5e44f46
+    md5: aede3d5c0882ebed2f07024400a111ed
+    sha256: b09ba557d62111d315f1841176cf01fd75e5ae0ae9d6360ccb6aaca1e9a6935f
   category: main
   optional: false
 - name: setuptools
-  version: 70.3.0
+  version: 71.0.1
   manager: conda
   platform: osx-arm64
   dependencies:
     python: '>=3.8'
-  url: https://conda.anaconda.org/conda-forge/noarch/setuptools-70.3.0-pyhd8ed1ab_0.conda
+  url: https://conda.anaconda.org/conda-forge/noarch/setuptools-71.0.1-pyhd8ed1ab_0.conda
   hash:
-    md5: 693bb57e8f92120caa956898065f3627
-    sha256: 869ea7688c040911ac1050d5765fa1f3d8ea1858c9f9cecb0df136a2f5e44f46
+    md5: aede3d5c0882ebed2f07024400a111ed
+    sha256: b09ba557d62111d315f1841176cf01fd75e5ae0ae9d6360ccb6aaca1e9a6935f
   category: main
   optional: false
 - name: shellingham
@@ -2152,5 +2153,27 @@ package:
   hash:
     md5: 4bb3f014845110883a3c5ee811fd84b4
     sha256: 93181a04ba8cfecfdfb162fc958436d868cc37db504c58078eab4c1a3e57fbb7
+  category: main
+  optional: false
+- name: jinja-partials
+  version: 0.2.1
+  manager: pip
+  platform: linux-64
+  dependencies:
+    jinja2: '*'
+  url: https://files.pythonhosted.org/packages/a7/f3/74e62cdc6b91724826bfcd8cc52de08392fc3973e95d0e1ba11966f82873/jinja_partials-0.2.1-py3-none-any.whl
+  hash:
+    sha256: c23a5217251350ef75b8368ce59fa7e43463cd61a11fde1b2c869b2011abb953
+  category: main
+  optional: false
+- name: jinja-partials
+  version: 0.2.1
+  manager: pip
+  platform: osx-arm64
+  dependencies:
+    jinja2: '*'
+  url: https://files.pythonhosted.org/packages/a7/f3/74e62cdc6b91724826bfcd8cc52de08392fc3973e95d0e1ba11966f82873/jinja_partials-0.2.1-py3-none-any.whl
+  hash:
+    sha256: c23a5217251350ef75b8368ce59fa7e43463cd61a11fde1b2c869b2011abb953
   category: main
   optional: false
