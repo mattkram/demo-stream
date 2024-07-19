@@ -1,4 +1,5 @@
 import functools
+import json
 import re
 from contextvars import ContextVar
 from datetime import datetime
@@ -117,3 +118,34 @@ async def home(
 @app.get("/healthz")
 async def health() -> dict[str, str]:
     return {"status": "ok"}
+
+
+try:
+    with open("repodata.json") as fp:
+        data = json.load(fp)
+except FileNotFoundError:
+    data = {}
+
+
+packages = data.get("packages", [])
+package_names = sorted(set(p["name"] for filename, p in packages.items()))
+
+PAGE_SIZE = 10
+
+
+class ChannelListModel(BaseModel):
+    packages: list[str] = []
+    page: int = 1
+
+
+@app.get("/main")
+async def main_channel(
+    from_htmx: Annotated[str, Header(alias="hx-request")] = "",
+    page: int = 1,
+) -> ChannelListModel:
+    start = (page - 1) * PAGE_SIZE
+    end = start + PAGE_SIZE
+    model = ChannelListModel(packages=package_names[start:end], page=page)
+    if from_htmx:
+        return render_template("partials/package_table.html", model=model)
+    return render_template("channel_list.html", model=model)
