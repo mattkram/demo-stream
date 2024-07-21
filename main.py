@@ -86,8 +86,9 @@ def _load_videos(order: str) -> list[Video]:
     )
 
 
-def render_template(name, model):
-    return templates.TemplateResponse(request=get_request(), name=name, context=model.dict())
+def render_template(name, model: BaseModel | None = None):
+    context = model.dict() if model is not None else {}
+    return templates.TemplateResponse(request=get_request(), name=name, context=context)
 
 
 def template(name: str) -> Any:
@@ -105,7 +106,13 @@ def template(name: str) -> Any:
 
 
 @app.get("/")
-async def home(
+async def home() -> HTMLResponse:
+    with open("templates/index.html", "rb") as fp:
+        return HTMLResponse(content=fp.read(), media_type="text/html", status_code=200)
+
+
+@app.get("/videos")
+async def videos(
     from_htmx: Annotated[str, Header(alias="hx-request")] = "",
     order: Annotated[str, Query()] = "desc",
 ) -> HTMLResponse:
@@ -138,7 +145,7 @@ class ChannelListModel(BaseModel):
     page: int = 1
 
 
-@app.get("/main")
+@app.get("/app")
 async def main_channel(
     from_htmx: Annotated[str, Header(alias="hx-request")] = "",
     page: int = 1,
