@@ -1,28 +1,5 @@
 {% extends "app.html" %}
 
 {% block main %}
-    <div class="offset-2 col-8">
-
-        <section id="profile-header">
-            <h2>Account Settings</h2>
-        </section>
-
-        {{ render_partial("partials/account-settings-form.html", model=model) }}
-
-        <hr/>
-        <section class="mt-4 profile-image-wrapper">
-            <div class="profile-image">
-                <img class="img-file" src="{{ model.gravitar_url }}"/>
-            </div>
-            <div>
-                <h4>Change your Profile Picture</h4>
-                <p class="mb-0">
-                    In order to change your profile picture, you can use
-                    <a href="https://en.gravatar.com/">Gravatar</a>. This profile picture will be linked to
-                    your email.
-                </p>
-            </div>
-        </section>
-    </div>
-
+    {{ render_partial("partials/account-settings-form.html", model=model) }}
 {% endblock %}
