@@ -7,50 +7,7 @@
             <h2>Account Settings</h2>
         </section>
 
-        <form>
-            <fieldset class="k-form-fieldset">
-                <h4>Personal Information</h4>
-
-                <div class="name-wrapper">
-                    <div class="form-group">
-
-                        <label for="firstName">First Name</label>
-                        <input class="form-control"
-                               type="text"
-                               id="firstName"
-                               placeholder="First Name"
-                        />
-                        <small>A first name is required</small>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="lastName">Last Name</label>
-                        <input class="form-control"
-                               type="text"
-                               id="lastName"
-                               placeholder="Last Name"
-                        />
-                        <small>A last name is required</small>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input class="form-control"
-                           type="text"
-                           id="email"
-                           placeholder="Email"
-                    />
-                    <small>Need to change your email? Please update
-                        <a href="#">here</a>.
-                    </small>
-                </div>
-            </fieldset>
-
-            <fieldset class="k-form-fieldset button-wrapper">
-                <button type="submit" class="btn btn-primary">Save Changes</button>
-            </fieldset>
-        </form>
+        {{ render_partial("partials/account-settings-form.html") }}
 
         <hr/>
         <section class="mt-4 profile-image-wrapper">
