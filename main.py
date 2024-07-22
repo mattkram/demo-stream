@@ -1,4 +1,5 @@
 import functools
+import hashlib
 import json
 import re
 from contextvars import ContextVar
@@ -11,7 +12,7 @@ from fastapi import FastAPI, Form, Header, Query, Request, Response
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
-from pydantic import BaseModel
+from pydantic import BaseModel, computed_field
 from starlette.middleware.base import BaseHTTPMiddleware, RequestResponseEndpoint
 
 templates = Jinja2Templates("tests/test_templates")
@@ -166,6 +167,13 @@ class AccountProfileViewModel(BaseModel):
     first_name: str = ""
     last_name: str = ""
     email: str = ""
+
+    @computed_field
+    @property
+    def gravitar_url(self) -> str:
+        email_hash = hashlib.md5(self.email.strip().lower().encode("utf-8")).hexdigest()
+        gravitar_url = f"https://www.gravatar.com/avatar/{email_hash}?d=404"
+        return gravitar_url
 
 
 ACCOUNT_DATABASE = {}
