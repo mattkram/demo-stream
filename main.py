@@ -145,7 +145,7 @@ class ChannelListModel(BaseModel):
     page: int = 1
 
 
-@app.get("/app")
+@app.get("/app/main")
 async def main_channel(
     from_htmx: Annotated[str, Header(alias="hx-request")] = "",
     page: int = 1,
@@ -156,3 +156,13 @@ async def main_channel(
     if from_htmx:
         return render_template("partials/package_table.html", model=model)
     return render_template("channel_list.html", model=model)
+
+
+@app.get("/app")
+async def app_home():
+    return render_template("app.html")
+
+
+@app.get("/app/profile/account-settings")
+async def account_settings():
+    return render_template("account-settings.html")
