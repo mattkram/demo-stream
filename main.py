@@ -7,7 +7,7 @@ from pathlib import Path
 from typing import Annotated, Any
 
 import jinja_partials
-from fastapi import FastAPI, Header, Query, Request, Response
+from fastapi import FastAPI, Form, Header, Query, Request, Response
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
@@ -87,7 +87,7 @@ def _load_videos(order: str) -> list[Video]:
 
 
 def render_template(name, model: BaseModel | None = None):
-    context = model.dict() if model is not None else {}
+    context = {"model": model.dict(), **model.dict()} if model is not None else {}
     return templates.TemplateResponse(request=get_request(), name=name, context=context)
 
 
@@ -133,7 +133,6 @@ try:
 except FileNotFoundError:
     data = {}
 
-
 packages = data.get("packages", [])
 package_names = sorted(set(p["name"] for filename, p in packages.items()))
 
@@ -163,6 +162,33 @@ async def app_home():
     return render_template("app.html")
 
 
+class AccountProfileViewModel(BaseModel):
+    first_name: str = ""
+    last_name: str = ""
+    email: str = ""
+
+
+ACCOUNT_DATABASE = {}
+USER_ID = "mrk"
+
+
 @app.get("/app/profile/account-settings")
-async def account_settings():
-    return render_template("account-settings.html")
+async def account_settings(from_htmx: Annotated[str, Header(alias="hx-request")] = ""):
+    model = AccountProfileViewModel(**ACCOUNT_DATABASE.get(USER_ID, {}))
+    if from_htmx:
+        return render_template("partials/account-settings-form.html", model=model)
+    return render_template(
+        "account-settings.html",
+        model=model,
+    )
+
+
+@app.put("/app/profile/account-settings")
+async def update_account_settings(
+    first_name: Annotated[str, Form()] = "",
+    last_name: Annotated[str, Form()] = "",
+    email: Annotated[str, Form()] = "",
+):
+    ACCOUNT_DATABASE[USER_ID] = {"first_name": first_name, "last_name": last_name, "email": email}
+    model = AccountProfileViewModel(**ACCOUNT_DATABASE.get(USER_ID, {}))
+    return render_template("partials/account-settings-form.html", model=model)

@@ -1,4 +1,8 @@
-<form>
+<form class="fade-me-in"
+      hx-target="this"
+      hx-put="/app/profile/account-settings"
+      hx-swap="outerHTML settle:0.1s"
+>
     <fieldset class="k-form-fieldset">
         <h4>Personal Information</h4>
 
@@ -9,7 +13,9 @@
                 <input class="form-control"
                        type="text"
                        id="firstName"
+                       name="first_name"
                        placeholder="First Name"
+                       value="{{ model.first_name }}"
                 />
                 <small>A first name is required</small>
             </div>
@@ -19,7 +25,9 @@
                 <input class="form-control"
                        type="text"
                        id="lastName"
+                       name="last_name"
                        placeholder="Last Name"
+                       value="{{ model.last_name }}"
                 />
                 <small>A last name is required</small>
             </div>
@@ -30,7 +38,9 @@
             <input class="form-control"
                    type="text"
                    id="email"
+                   name="email"
                    placeholder="Email"
+                   value="{{ model.email }}"
             />
             <small>Need to change your email? Please update
                 <a href="#">here</a>.
@@ -40,5 +50,6 @@
 
     <fieldset class="k-form-fieldset button-wrapper">
         <button type="submit" class="btn btn-primary">Save Changes</button>
+        <button class="btn" hx-get="/app/profile/account-settings">Cancel</button>
     </fieldset>
 </form>
