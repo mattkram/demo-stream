@@ -13,8 +13,8 @@
 version: 1
 metadata:
   content_hash:
-    osx-arm64: 1ac25d9d737a2b37182f3a336c6c60ea4b89823d5b8f6fb461f461ae37820a52
-    linux-64: 229f3e41f6e080a4aa293f18d9b2a6714257e3bb822e96a4180b2cdd7f703330
+    osx-arm64: 9053893b2f5e033eca0906c57b2ba8ed57cdac6d7a148b95287241b224cf25bd
+    linux-64: f6dd57a6c671d0cb70551ca2e8120d80ba289aff8de3e15a6410d1acafdb875e
   channels:
   - url: conda-forge
     used_env_vars: []
@@ -25,7 +25,7 @@ metadata:
   - environment-dev.yml
   - environment-prod.yml
   time_metadata:
-    created_at: '2024-07-15T01:10:41Z'
+    created_at: '2024-07-31T11:28:20Z'
 package:
 - name: _libgcc_mutex
   version: '0.1'
@@ -794,10 +794,10 @@ package:
   platform: osx-arm64
   dependencies:
     __osx: '>=11.0'
-  url: https://conda.anaconda.org/conda-forge/osx-arm64/libcxx-18.1.8-h167917d_0.conda
+  url: https://conda.anaconda.org/conda-forge/osx-arm64/libcxx-18.1.8-h167917d_2.conda
   hash:
-    md5: c891c2eeabd7d67fbc38e012cc6045d6
-    sha256: a598062f2d1522fc3727c16620fbc2bc913c1069342671428a92fcf4eb02ec12
+    md5: 15656a04159b40ab98e02b46b52b7919
+    sha256: 001b211de6264f7160f4e781efbff11cd67a326f67b7d6b07e6278fcb0cc2f50
   category: main
   optional: false
 - name: libexpat
@@ -1047,24 +1047,25 @@ package:
   category: main
   optional: false
 - name: mypy
-  version: 1.10.1
+  version: 1.11.0
   manager: conda
   platform: linux-64
   dependencies:
+    __glibc: '>=2.17,<3.0.a0'
     libgcc-ng: '>=12'
     mypy_extensions: '>=1.0.0'
     psutil: '>=4.0'
     python: '>=3.12,<3.13.0a0'
     python_abi: 3.12.*
     typing_extensions: '>=4.1.0'
-  url: https://conda.anaconda.org/conda-forge/linux-64/mypy-1.10.1-py312h9a8786e_0.conda
+  url: https://conda.anaconda.org/conda-forge/linux-64/mypy-1.11.0-py312h41a817b_0.conda
   hash:
-    md5: 35504aad41d76808fa379bee8cd6882e
-    sha256: d65af401f7368680f164990f110d084ee5139cd01a62189c76a88ab87ea50285
+    md5: 0dc930775b7811f0537ef60ed43e9296
+    sha256: f9c876f289f51bceb399503a860000faa009865f83ea75591e60820c44518c1d
   category: main
   optional: false
 - name: mypy
-  version: 1.10.1
+  version: 1.11.0
   manager: conda
   platform: osx-arm64
   dependencies:
@@ -1074,10 +1075,10 @@ package:
     python: '>=3.12,<3.13.0a0'
     python_abi: 3.12.*
     typing_extensions: '>=4.1.0'
-  url: https://conda.anaconda.org/conda-forge/osx-arm64/mypy-1.10.1-py312h7e5086c_0.conda
+  url: https://conda.anaconda.org/conda-forge/osx-arm64/mypy-1.11.0-py312h7e5086c_0.conda
   hash:
-    md5: 0aea347a79c70d8134ebd2efc897dda0
-    sha256: d07f260bde42e963558bedbb5d8607c18a16f71a0dff45fb7cecc85bfcd97c6f
+    md5: 8d56d9651537ecdf2bb875cea8dfd8ee
+    sha256: fbaf52a99b769a1d75df18c142fbdf633837b3a1de9d893d96be26b95e94cf0d
   category: main
   optional: false
 - name: mypy_extensions
@@ -1158,12 +1159,13 @@ package:
   manager: conda
   platform: linux-64
   dependencies:
+    __glibc: '>=2.17,<3.0.a0'
     ca-certificates: ''
     libgcc-ng: '>=12'
-  url: https://conda.anaconda.org/conda-forge/linux-64/openssl-3.3.1-h4ab18f5_1.conda
+  url: https://conda.anaconda.org/conda-forge/linux-64/openssl-3.3.1-h4bc722e_2.conda
   hash:
-    md5: b1e9d076f14e8d776213fd5047b4c3d9
-    sha256: ff3faf8d4c1c9aa4bd3263b596a68fcc6ac910297f354b2ce28718a3509db6d9
+    md5: e1b454497f9f7c1147fdde4b53f1b512
+    sha256: b294b3cc706ad1048cdb514f0db3da9f37ae3fcc0c53a7104083dd0918adb200
   category: main
   optional: false
 - name: openssl
@@ -1173,10 +1175,10 @@ package:
   dependencies:
     __osx: '>=11.0'
     ca-certificates: ''
-  url: https://conda.anaconda.org/conda-forge/osx-arm64/openssl-3.3.1-hfb2fe0b_1.conda
+  url: https://conda.anaconda.org/conda-forge/osx-arm64/openssl-3.3.1-hfb2fe0b_2.conda
   hash:
-    md5: c665dec48e08311096823956642a501c
-    sha256: 3ab411856c3bef88595473f0dd86e82de4f913f88319548acf262d5b1175b050
+    md5: 9b551a504c1cc8f8b7b22c01814da8ba
+    sha256: dd7d988636f74473ebdfe15e05c5aabdb53a1d2a846c839d62289b0c37f81548
   category: main
   optional: false
 - name: packaging
@@ -1693,27 +1695,27 @@ package:
   category: main
   optional: false
 - name: setuptools
-  version: 70.3.0
+  version: 71.0.4
   manager: conda
   platform: linux-64
   dependencies:
     python: '>=3.8'
-  url: https://conda.anaconda.org/conda-forge/noarch/setuptools-70.3.0-pyhd8ed1ab_0.conda
+  url: https://conda.anaconda.org/conda-forge/noarch/setuptools-71.0.4-pyhd8ed1ab_0.conda
   hash:
-    md5: 693bb57e8f92120caa956898065f3627
-    sha256: 869ea7688c040911ac1050d5765fa1f3d8ea1858c9f9cecb0df136a2f5e44f46
+    md5: ee78ac9c720d0d02fcfd420866b82ab1
+    sha256: e1b5dd28d2ea2a7ad660fbc8d1f2ef682a2f8460f80240d836d62e56225ac680
   category: main
   optional: false
 - name: setuptools
-  version: 70.3.0
+  version: 71.0.4
   manager: conda
   platform: osx-arm64
   dependencies:
     python: '>=3.8'
-  url: https://conda.anaconda.org/conda-forge/noarch/setuptools-70.3.0-pyhd8ed1ab_0.conda
+  url: https://conda.anaconda.org/conda-forge/noarch/setuptools-71.0.4-pyhd8ed1ab_0.conda
   hash:
-    md5: 693bb57e8f92120caa956898065f3627
-    sha256: 869ea7688c040911ac1050d5765fa1f3d8ea1858c9f9cecb0df136a2f5e44f46
+    md5: ee78ac9c720d0d02fcfd420866b82ab1
+    sha256: e1b5dd28d2ea2a7ad660fbc8d1f2ef682a2f8460f80240d836d62e56225ac680
   category: main
   optional: false
 - name: shellingham
@@ -2025,7 +2027,7 @@ package:
   category: main
   optional: false
 - name: uvicorn
-  version: 0.30.1
+  version: 0.30.3
   manager: conda
   platform: linux-64
   dependencies:
@@ -2033,14 +2035,14 @@ package:
     h11: '>=0.8'
     python: '>=3.12,<3.13.0a0'
     python_abi: 3.12.*
-  url: https://conda.anaconda.org/conda-forge/linux-64/uvicorn-0.30.1-py312h7900ff3_0.conda
+  url: https://conda.anaconda.org/conda-forge/linux-64/uvicorn-0.30.3-py312h7900ff3_0.conda
   hash:
-    md5: 5bfc9003c6fbaa658f513f9c41bd2446
-    sha256: 36eafb2f2c03eb543a0c5d9bfe60061b91e59844bef00bbf643bd4c47b8e576d
+    md5: 2d04f9df8a98500f1329dd9ff65f0184
+    sha256: 6c80061d8ac5268d80f9a72db1ec151867c7db9540d378476b335a9a6be17dc8
   category: main
   optional: false
 - name: uvicorn
-  version: 0.30.1
+  version: 0.30.3
   manager: conda
   platform: osx-arm64
   dependencies:
@@ -2048,10 +2050,10 @@ package:
     h11: '>=0.8'
     python: '>=3.12,<3.13.0a0'
     python_abi: 3.12.*
-  url: https://conda.anaconda.org/conda-forge/osx-arm64/uvicorn-0.30.1-py312h81bd7bf_0.conda
+  url: https://conda.anaconda.org/conda-forge/osx-arm64/uvicorn-0.30.3-py312h81bd7bf_0.conda
   hash:
-    md5: 965eeb87bab4d71d9d653bf09f073b73
-    sha256: 0da65fdde5e5c02def9dc2b436f947b283cf43f00204571b328f23a7c29a4e0c
+    md5: 53226fef9557d36db1acbcc9a64d18c1
+    sha256: cdbff1a88ce92e7fd31547c2c4b5154dd3d4f943194cfc25f7b880b82839b600
   category: main
   optional: false
 - name: virtualenv
