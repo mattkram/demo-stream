@@ -13,8 +13,8 @@
 version: 1
 metadata:
   content_hash:
-    osx-arm64: a68879e382b98bf3d830c956bc263ad1bfc03cb2a99fbd7f9c424af9beaa2d9e
-    linux-64: 96b554c1773ca7cc0a8c2cabb080a782f1fc33766ea74c918a84d537c863d358
+    osx-arm64: 31466a879e188085b1586e7dcc9863b016d0ecb0842d1cf9e3278ca634c13885
+    linux-64: 5d5fb4509c551789c29ee6c0dddeaaf44436258f688559364134cfeec46dcff2
   channels:
   - url: conda-forge
     used_env_vars: []
@@ -25,7 +25,7 @@ metadata:
   - environment-dev.yml
   - environment-prod.yml
   time_metadata:
-    created_at: '2024-08-04T13:57:36Z'
+    created_at: '2024-08-04T13:58:41Z'
 package:
 - name: _libgcc_mutex
   version: '0.1'
@@ -1281,7 +1281,7 @@ package:
   category: main
   optional: false
 - name: pre-commit
-  version: 3.8.0
+  version: 3.7.1
   manager: conda
   platform: linux-64
   dependencies:
@@ -1291,14 +1291,14 @@ package:
     python: '>=3.9'
     pyyaml: '>=5.1'
     virtualenv: '>=20.10.0'
-  url: https://conda.anaconda.org/conda-forge/noarch/pre-commit-3.8.0-pyha770c72_0.conda
+  url: https://conda.anaconda.org/conda-forge/noarch/pre-commit-3.7.1-pyha770c72_0.conda
   hash:
-    md5: 1822e87a5d357f79c6aab871d86fb062
-    sha256: 2363c8706ca3b2a3385b09e33f639f6b66e4fa8d00a21c3dea4d934472a96e85
+    md5: 724bc4489c1174fc8e3233b0624fa51f
+    sha256: 689c169ce6ed5d516d8524cc1e6ef2687dff19747c1ed1ee9b347a71f47ff12d
   category: main
   optional: false
 - name: pre-commit
-  version: 3.8.0
+  version: 3.7.1
   manager: conda
   platform: osx-arm64
   dependencies:
@@ -1308,10 +1308,10 @@ package:
     python: '>=3.9'
     pyyaml: '>=5.1'
     virtualenv: '>=20.10.0'
-  url: https://conda.anaconda.org/conda-forge/noarch/pre-commit-3.8.0-pyha770c72_0.conda
+  url: https://conda.anaconda.org/conda-forge/noarch/pre-commit-3.7.1-pyha770c72_0.conda
   hash:
-    md5: 1822e87a5d357f79c6aab871d86fb062
-    sha256: 2363c8706ca3b2a3385b09e33f639f6b66e4fa8d00a21c3dea4d934472a96e85
+    md5: 724bc4489c1174fc8e3233b0624fa51f
+    sha256: 689c169ce6ed5d516d8524cc1e6ef2687dff19747c1ed1ee9b347a71f47ff12d
   category: main
   optional: false
 - name: psutil
