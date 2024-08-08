@@ -13,8 +13,8 @@
 version: 1
 metadata:
   content_hash:
-    osx-arm64: 5573429a833c5645571f668b6570fbb5924666bfbe188082b14e16412af6f267
-    linux-64: f61d87bcf0dd5824e13d5f0c23a90db45558d7b04b9dda04d4fa66f271860d0c
+    osx-arm64: 48a40809881521a568524bb0e43f5bd1a711d66bcdbd7d7eb7d7fd45ba61e66e
+    linux-64: 9dd3e45af7d56536ea01fa4ac86d46809606a2e319d7507bd175452d16aa25f6
   channels:
   - url: conda-forge
     used_env_vars: []
@@ -25,7 +25,7 @@ metadata:
   - environment-dev.yml
   - environment-prod.yml
   time_metadata:
-    created_at: '2024-08-08T20:12:45Z'
+    created_at: '2024-08-08T20:13:41Z'
 package:
 - name: _libgcc_mutex
   version: '0.1'
@@ -1516,11 +1516,10 @@ package:
   category: main
   optional: false
 - name: python
-  version: 3.12.5
+  version: 3.12.4
   manager: conda
   platform: linux-64
   dependencies:
-    __glibc: '>=2.17,<3.0.a0'
     bzip2: '>=1.0.8,<2.0a0'
     ld_impl_linux-64: '>=2.36.1'
     libexpat: '>=2.6.2,<3.0a0'
@@ -1537,14 +1536,14 @@ package:
     tk: '>=8.6.13,<8.7.0a0'
     tzdata: ''
     xz: '>=5.2.6,<6.0a0'
-  url: https://conda.anaconda.org/conda-forge/linux-64/python-3.12.5-h2ad013b_0_cpython.conda
+  url: https://conda.anaconda.org/conda-forge/linux-64/python-3.12.4-h194c7f8_0_cpython.conda
   hash:
-    md5: 9c56c4df45f6571b13111d8df2448692
-    sha256: e2aad83838988725d4ffba4e9717b9328054fd18a668cff3377e0c50f109e8bd
+    md5: d73490214f536cccb5819e9873048c92
+    sha256: 97a78631e6c928bf7ad78d52f7f070fcf3bd37619fa48dc4394c21cf3058cdee
   category: main
   optional: false
 - name: python
-  version: 3.12.5
+  version: 3.12.4
   manager: conda
   platform: osx-arm64
   dependencies:
@@ -1560,10 +1559,10 @@ package:
     tk: '>=8.6.13,<8.7.0a0'
     tzdata: ''
     xz: '>=5.2.6,<6.0a0'
-  url: https://conda.anaconda.org/conda-forge/osx-arm64/python-3.12.5-h30c5eda_0_cpython.conda
+  url: https://conda.anaconda.org/conda-forge/osx-arm64/python-3.12.4-h30c5eda_0_cpython.conda
   hash:
-    md5: 5e315581e2948dfe3bcac306540e9803
-    sha256: 1319e918fb54c9491832a9731cad00235a76f61c6f9b23fc0f70cdfb74c950ea
+    md5: e3e44e0e72aed46dcb810fa3e96784be
+    sha256: 107824b584eb5e43f71df8cb2741019f5c377c734f8309899aa2a6ed53b79a47
   category: main
   optional: false
 - name: python-multipart
