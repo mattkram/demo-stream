@@ -13,8 +13,8 @@
 version: 1
 metadata:
   content_hash:
-    osx-arm64: 0237adffe1c109d666942956eeab1a4710f36dd37fbaa9af2e6ea12eca05b1f1
-    linux-64: bdcea620eb7815819b92aad7e8f6af25f5db303c2f79d7a30ffd45d9a1c53551
+    osx-arm64: 48a40809881521a568524bb0e43f5bd1a711d66bcdbd7d7eb7d7fd45ba61e66e
+    linux-64: 9dd3e45af7d56536ea01fa4ac86d46809606a2e319d7507bd175452d16aa25f6
   channels:
   - url: conda-forge
     used_env_vars: []
@@ -25,7 +25,7 @@ metadata:
   - environment-dev.yml
   - environment-prod.yml
   time_metadata:
-    created_at: '2024-09-10T16:20:12Z'
+    created_at: '2024-09-10T16:21:11Z'
 package:
 - name: _libgcc_mutex
   version: '0.1'
@@ -1474,7 +1474,7 @@ package:
   category: main
   optional: false
 - name: pytest
-  version: 8.3.3
+  version: 8.3.2
   manager: conda
   platform: linux-64
   dependencies:
@@ -1485,14 +1485,14 @@ package:
     pluggy: <2,>=1.5
     python: '>=3.8'
     tomli: '>=1'
-  url: https://conda.anaconda.org/conda-forge/noarch/pytest-8.3.3-pyhd8ed1ab_0.conda
+  url: https://conda.anaconda.org/conda-forge/noarch/pytest-8.3.2-pyhd8ed1ab_0.conda
   hash:
-    md5: c03d61f31f38fdb9facf70c29958bf7a
-    sha256: e99376d0068455712109d233f5790458ff861aeceb458bfda74e353338e4d815
+    md5: e010a224b90f1f623a917c35addbb924
+    sha256: 72c84a3cd9fe82835a88e975fd2a0dbf2071d1c423ea4f79e7930578c1014873
   category: main
   optional: false
 - name: pytest
-  version: 8.3.3
+  version: 8.3.2
   manager: conda
   platform: osx-arm64
   dependencies:
@@ -1503,10 +1503,10 @@ package:
     exceptiongroup: '>=1.0.0rc8'
     tomli: '>=1'
     pluggy: <2,>=1.5
-  url: https://conda.anaconda.org/conda-forge/noarch/pytest-8.3.3-pyhd8ed1ab_0.conda
+  url: https://conda.anaconda.org/conda-forge/noarch/pytest-8.3.2-pyhd8ed1ab_0.conda
   hash:
-    md5: c03d61f31f38fdb9facf70c29958bf7a
-    sha256: e99376d0068455712109d233f5790458ff861aeceb458bfda74e353338e4d815
+    md5: e010a224b90f1f623a917c35addbb924
+    sha256: 72c84a3cd9fe82835a88e975fd2a0dbf2071d1c423ea4f79e7930578c1014873
   category: main
   optional: false
 - name: pytest-asyncio
