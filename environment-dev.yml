@@ -3,7 +3,7 @@ channels:
   - conda-forge
 dependencies:
   # renovate: datasource=conda depName=conda-forge/pytest
-  - pytest=8.3.3
+  - pytest=8.3.2
   # renovate: datasource=conda depName=conda-forge/pre-commit
   - pre-commit=3.7.1
   # renovate: datasource=conda depName=conda-forge/httpx
