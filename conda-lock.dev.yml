@@ -25,7 +25,7 @@ metadata:
   - environment-dev.yml
   - environment-prod.yml
   time_metadata:
-    created_at: '2024-10-07T01:29:43Z'
+    created_at: '2024-10-10T04:58:30Z'
 package:
 - name: _libgcc_mutex
   version: '0.1'
@@ -1015,7 +1015,7 @@ package:
   category: main
   optional: false
 - name: markupsafe
-  version: 2.1.5
+  version: 3.0.1
   manager: conda
   platform: linux-64
   dependencies:
@@ -1023,24 +1023,24 @@ package:
     libgcc: '>=13'
     python: '>=3.12,<3.13.0a0'
     python_abi: 3.12.*
-  url: https://conda.anaconda.org/conda-forge/linux-64/markupsafe-2.1.5-py312h66e93f0_1.conda
+  url: https://conda.anaconda.org/conda-forge/linux-64/markupsafe-3.0.1-py312h178313f_1.conda
   hash:
-    md5: 80b79ce0d3dc127e96002dfdcec0a2a5
-    sha256: 5c88cd6e19437015de16bde30dd25791aca63ac9cbb8d66b65f365ecff1b235b
+    md5: 490afd4d3627a7f999b9d633c4b6c229
+    sha256: d65455297e005c73811848fb3b25a9570d5712c972c7302198ca72698f5f5341
   category: main
   optional: false
 - name: markupsafe
-  version: 2.1.5
+  version: 3.0.1
   manager: conda
   platform: osx-arm64
   dependencies:
     __osx: '>=11.0'
     python: '>=3.12,<3.13.0a0'
     python_abi: 3.12.*
-  url: https://conda.anaconda.org/conda-forge/osx-arm64/markupsafe-2.1.5-py312h024a12e_1.conda
+  url: https://conda.anaconda.org/conda-forge/osx-arm64/markupsafe-3.0.1-py312h906988d_1.conda
   hash:
-    md5: 66ee733dbdf8a9ca670f167bf5ea36b4
-    sha256: 0e337724d82b19510c457246c319b35944580f31b3859359e1e8b9c53a14bc52
+    md5: 1d5bfcca1e22c01219af6845ec51772f
+    sha256: 6fecbc3da19cabddd870ff51c29f3bc174ee0db564d2e45a1a6490969fc048dd
   category: main
   optional: false
 - name: mdurl
