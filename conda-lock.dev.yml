@@ -13,8 +13,8 @@
 version: 1
 metadata:
   content_hash:
-    osx-arm64: 1ea1ae3a0763d161b0153818e4891f42036e99199fb7891f90407406e7399c53
-    linux-64: 2d4e51cb274668071f81443249e756cf9350c4f86ecdb9e52cb9a5b1869336ab
+    osx-arm64: fadb30f7f242bda0cd64b6beb426f458ababa104089363ec3651a9608b7ebb0d
+    linux-64: a3778cacb1a021e804e4dd6a08bbe660fa391143e667c510652d4cd4681f1162
   channels:
   - url: conda-forge
     used_env_vars: []
@@ -25,7 +25,7 @@ metadata:
   - environment-dev.yml
   - environment-prod.yml
   time_metadata:
-    created_at: '2025-02-03T01:57:23Z'
+    created_at: '2025-02-03T02:31:50Z'
 package:
 - name: _libgcc_mutex
   version: '0.1'
@@ -1620,29 +1620,29 @@ package:
   category: main
   optional: false
 - name: pytest-asyncio
-  version: 0.23.8
+  version: 0.25.3
   manager: conda
   platform: linux-64
   dependencies:
-    pytest: '>=7.0.0,<9'
-    python: '>=3.8'
-  url: https://conda.anaconda.org/conda-forge/noarch/pytest-asyncio-0.23.8-pyhd8ed1ab_0.conda
+    pytest: '>=8.2,<9'
+    python: ''
+  url: https://conda.anaconda.org/conda-forge/noarch/pytest-asyncio-0.25.3-pyh29332c3_0.conda
   hash:
-    md5: c6d4ba9595f5e54f32b2e68ac7f97df0
-    sha256: 6c80b03340e86cdd6d643b65fec2cdefb007863c69b12c3a4309cd27f3e61e35
+    md5: 6445a0520d12c8738902079dc9eaf98d
+    sha256: 34c5444d6b574d17234e276cacce53de924b9b2460777e9d5d1d3a5781089cb1
   category: main
   optional: false
 - name: pytest-asyncio
-  version: 0.23.8
+  version: 0.25.3
   manager: conda
   platform: osx-arm64
   dependencies:
-    python: '>=3.8'
-    pytest: '>=7.0.0,<9'
-  url: https://conda.anaconda.org/conda-forge/noarch/pytest-asyncio-0.23.8-pyhd8ed1ab_0.conda
+    python: '>=3.9'
+    pytest: '>=8.2,<9'
+  url: https://conda.anaconda.org/conda-forge/noarch/pytest-asyncio-0.25.3-pyh29332c3_0.conda
   hash:
-    md5: c6d4ba9595f5e54f32b2e68ac7f97df0
-    sha256: 6c80b03340e86cdd6d643b65fec2cdefb007863c69b12c3a4309cd27f3e61e35
+    md5: 6445a0520d12c8738902079dc9eaf98d
+    sha256: 34c5444d6b574d17234e276cacce53de924b9b2460777e9d5d1d3a5781089cb1
   category: main
   optional: false
 - name: python
