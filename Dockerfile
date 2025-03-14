@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 continuumio/miniconda3:24.11.1-0@sha256:6a66425f001f739d4778dd732e020afeb06175f49478fafc3ec673658d61550b as builder
+FROM --platform=linux/amd64 continuumio/miniconda3:25.1.1-0@sha256:2b267ca91c8382012d46a9c877e4ee33e0a33bba4b598909c7b81b71f9cda721 as builder
 
 # TODO: Replace this with a new builder image that is generated from its own lockfile
 RUN conda install -c conda-forge --override-channels conda-project
