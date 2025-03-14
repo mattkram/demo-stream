@@ -13,8 +13,8 @@
 version: 1
 metadata:
   content_hash:
-    osx-arm64: 986921792ebe9681b1819f5d2d9fc1be4aa362f8673af4f11797b4f25c59b111
-    linux-64: 6e7b57c0831241f0f942da1e9af44676a3cf1449b3ee5d693535a534ec6fd681
+    osx-arm64: 1ea1ae3a0763d161b0153818e4891f42036e99199fb7891f90407406e7399c53
+    linux-64: 2d4e51cb274668071f81443249e756cf9350c4f86ecdb9e52cb9a5b1869336ab
   channels:
   - url: conda-forge
     used_env_vars: []
@@ -25,7 +25,7 @@ metadata:
   - environment-dev.yml
   - environment-prod.yml
   time_metadata:
-    created_at: '2025-03-14T23:07:46Z'
+    created_at: '2025-03-14T23:08:38Z'
 package:
 - name: _libgcc_mutex
   version: '0.1'
@@ -1176,25 +1176,24 @@ package:
   category: main
   optional: false
 - name: mypy
-  version: 1.15.0
+  version: 1.10.1
   manager: conda
   platform: linux-64
   dependencies:
-    __glibc: '>=2.17,<3.0.a0'
-    libgcc: '>=13'
+    libgcc-ng: '>=12'
     mypy_extensions: '>=1.0.0'
     psutil: '>=4.0'
     python: '>=3.12,<3.13.0a0'
     python_abi: 3.12.*
     typing_extensions: '>=4.1.0'
-  url: https://conda.anaconda.org/conda-forge/linux-64/mypy-1.15.0-py312h66e93f0_0.conda
+  url: https://conda.anaconda.org/conda-forge/linux-64/mypy-1.10.1-py312h9a8786e_0.conda
   hash:
-    md5: a84061bc7e166712deb33bf7b32f756d
-    sha256: b57c8bd233087479c70cb3ee3420861e0625b8a5a697f5abe41f5103fb2c2e69
+    md5: 35504aad41d76808fa379bee8cd6882e
+    sha256: d65af401f7368680f164990f110d084ee5139cd01a62189c76a88ab87ea50285
   category: main
   optional: false
 - name: mypy
-  version: 1.15.0
+  version: 1.10.1
   manager: conda
   platform: osx-arm64
   dependencies:
@@ -1204,10 +1203,10 @@ package:
     python: '>=3.12,<3.13.0a0'
     python_abi: 3.12.*
     typing_extensions: '>=4.1.0'
-  url: https://conda.anaconda.org/conda-forge/osx-arm64/mypy-1.15.0-py312hea69d52_0.conda
+  url: https://conda.anaconda.org/conda-forge/osx-arm64/mypy-1.10.1-py312h7e5086c_0.conda
   hash:
-    md5: 909034322685579577b1bbb9b47e39e1
-    sha256: 7284d77173d385f5c7456c13d825dbae170920a31ca7a0996d2608ad17f17e2f
+    md5: 0aea347a79c70d8134ebd2efc897dda0
+    sha256: d07f260bde42e963558bedbb5d8607c18a16f71a0dff45fb7cecc85bfcd97c6f
   category: main
   optional: false
 - name: mypy_extensions
