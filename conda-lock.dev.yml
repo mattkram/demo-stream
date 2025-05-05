@@ -13,8 +13,8 @@
 version: 1
 metadata:
   content_hash:
-    osx-arm64: 6c3bff5249b14c9ca1441bec28ddccf98fdf14973cb57992752eb1fe03786945
-    linux-64: 279dad4a594863970842ee47afb232231bb09f422221cab7bac2a18e74b895e5
+    osx-arm64: 8835c3b2d8db22e52affc657b60d37ba85e49b44a9591fbbd5159211e2010465
+    linux-64: c7f03573e7d3ca5dda65cbd50e6117ecaff94bd27b0fac5b07d09e24183bb5dd
   channels:
   - url: conda-forge
     used_env_vars: []
@@ -25,7 +25,7 @@ metadata:
   - environment-dev.yml
   - environment-prod.yml
   time_metadata:
-    created_at: '2025-05-05T02:45:21Z'
+    created_at: '2025-05-05T02:49:21Z'
 package:
 - name: _libgcc_mutex
   version: '0.1'
@@ -416,45 +416,45 @@ package:
   category: main
   optional: false
 - name: fastapi
-  version: 0.112.0
+  version: 0.115.12
   manager: conda
   platform: linux-64
   dependencies:
+    python: ''
+    starlette: '>=0.40.0,<0.47.0'
+    typing_extensions: '>=4.8.0'
+    pydantic: '>=1.7.4,!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0'
     email_validator: '>=2.0.0'
     fastapi-cli: '>=0.0.5'
     httpx: '>=0.23.0'
-    jinja2: '>=2.11.2'
-    pydantic: '>=1.7.4,!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0'
-    python: '>=3.8'
-    python-multipart: '>=0.0.7'
-    starlette: '>=0.37.2,<0.38.0'
-    typing-extensions: '>=4.8.0'
-    uvicorn: '>=0.12.0'
-  url: https://conda.anaconda.org/conda-forge/noarch/fastapi-0.112.0-pyhd8ed1ab_0.conda
+    jinja2: '>=3.1.5'
+    python-multipart: '>=0.0.18'
+    uvicorn-standard: '>=0.12.0'
+  url: https://conda.anaconda.org/conda-forge/noarch/fastapi-0.115.12-pyh29332c3_0.conda
   hash:
-    md5: 8cb038d7fa460efb26ef62098edbe652
-    sha256: 84b31c42b73264049b0cc6acd9bccc967c0826dae262401eda0e7c4c111add2f
+    md5: 4bc12ece07c8c717e19fd790bfec100d
+    sha256: d72da6ea523d80968f0cca4ba4fb6c31fc27450d07e419f039da9b99654a56e6
   category: main
   optional: false
 - name: fastapi
-  version: 0.112.0
+  version: 0.115.12
   manager: conda
   platform: osx-arm64
   dependencies:
-    python: '>=3.8'
+    python: '>=3.9'
     httpx: '>=0.23.0'
-    python-multipart: '>=0.0.7'
-    typing-extensions: '>=4.8.0'
-    jinja2: '>=2.11.2'
+    typing_extensions: '>=4.8.0'
     pydantic: '>=1.7.4,!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0'
+    python-multipart: '>=0.0.18'
     email_validator: '>=2.0.0'
     fastapi-cli: '>=0.0.5'
-    uvicorn: '>=0.12.0'
-    starlette: '>=0.37.2,<0.38.0'
-  url: https://conda.anaconda.org/conda-forge/noarch/fastapi-0.112.0-pyhd8ed1ab_0.conda
+    jinja2: '>=3.1.5'
+    uvicorn-standard: '>=0.12.0'
+    starlette: '>=0.40.0,<0.47.0'
+  url: https://conda.anaconda.org/conda-forge/noarch/fastapi-0.115.12-pyh29332c3_0.conda
   hash:
-    md5: 8cb038d7fa460efb26ef62098edbe652
-    sha256: 84b31c42b73264049b0cc6acd9bccc967c0826dae262401eda0e7c4c111add2f
+    md5: 4bc12ece07c8c717e19fd790bfec100d
+    sha256: d72da6ea523d80968f0cca4ba4fb6c31fc27450d07e419f039da9b99654a56e6
   category: main
   optional: false
 - name: fastapi-cli
@@ -1961,31 +1961,31 @@ package:
   category: main
   optional: false
 - name: starlette
-  version: 0.37.2
+  version: 0.46.2
   manager: conda
   platform: linux-64
   dependencies:
-    anyio: <5,>=3.4.0
-    python: '>=3.8'
+    anyio: '>=3.6.2,<5'
+    python: ''
     typing_extensions: '>=3.10.0'
-  url: https://conda.anaconda.org/conda-forge/noarch/starlette-0.37.2-pyhd8ed1ab_0.conda
+  url: https://conda.anaconda.org/conda-forge/noarch/starlette-0.46.2-pyh81abbef_0.conda
   hash:
-    md5: 7e5550dfa3ed2c2019988cbb9f8302ea
-    sha256: de3c43075fdc33c90cd8034e440638904268c46023dc2b14921a8355415dc40e
+    md5: 36ec80c2b37e52760ab41be7c2bd1fd3
+    sha256: d41b9b2719a2a0176930df21d7fec7b758058e7fafd53dc900b5706cd627fa3a
   category: main
   optional: false
 - name: starlette
-  version: 0.37.2
+  version: 0.46.2
   manager: conda
   platform: osx-arm64
   dependencies:
-    python: '>=3.8'
+    python: '>=3.9'
     typing_extensions: '>=3.10.0'
-    anyio: <5,>=3.4.0
-  url: https://conda.anaconda.org/conda-forge/noarch/starlette-0.37.2-pyhd8ed1ab_0.conda
+    anyio: '>=3.6.2,<5'
+  url: https://conda.anaconda.org/conda-forge/noarch/starlette-0.46.2-pyh81abbef_0.conda
   hash:
-    md5: 7e5550dfa3ed2c2019988cbb9f8302ea
-    sha256: de3c43075fdc33c90cd8034e440638904268c46023dc2b14921a8355415dc40e
+    md5: 36ec80c2b37e52760ab41be7c2bd1fd3
+    sha256: d41b9b2719a2a0176930df21d7fec7b758058e7fafd53dc900b5706cd627fa3a
   category: main
   optional: false
 - name: tk
