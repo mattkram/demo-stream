@@ -13,8 +13,8 @@
 version: 1
 metadata:
   content_hash:
-    osx-arm64: 6c3bff5249b14c9ca1441bec28ddccf98fdf14973cb57992752eb1fe03786945
-    linux-64: 279dad4a594863970842ee47afb232231bb09f422221cab7bac2a18e74b895e5
+    osx-arm64: 74d990538262f46e4d7cf0239cf87b7eaba6f96118b05d5d99d639f1d8cb53f8
+    linux-64: b19f67f2dcb698ffb36d014b9bfcbb26acef90f5d6c92504f594e195e70c1b40
   channels:
   - url: conda-forge
     used_env_vars: []
@@ -25,7 +25,7 @@ metadata:
   - environment-dev.yml
   - environment-prod.yml
   time_metadata:
-    created_at: '2025-05-05T02:45:21Z'
+    created_at: '2025-05-05T02:48:55Z'
 package:
 - name: _libgcc_mutex
   version: '0.1'
@@ -1339,31 +1339,31 @@ package:
   category: main
   optional: false
 - name: pip
-  version: 25.0.1
+  version: 25.1.1
   manager: conda
   platform: linux-64
   dependencies:
     python: '>=3.9,<3.13.0a0'
     setuptools: ''
     wheel: ''
-  url: https://conda.anaconda.org/conda-forge/noarch/pip-25.0.1-pyh8b19718_0.conda
+  url: https://conda.anaconda.org/conda-forge/noarch/pip-25.1.1-pyh8b19718_0.conda
   hash:
-    md5: 79b5c1440aedc5010f687048d9103628
-    sha256: 585940f09d87787f79f73ff5dff8eb2af8a67e5bec5eebf2f553cd26c840ba69
+    md5: 32d0781ace05105cc99af55d36cbec7c
+    sha256: ebfa591d39092b111b9ebb3210eb42251be6da89e26c823ee03e5e838655a43e
   category: main
   optional: false
 - name: pip
-  version: 25.0.1
+  version: 25.1.1
   manager: conda
   platform: osx-arm64
   dependencies:
     setuptools: ''
     wheel: ''
     python: '>=3.9,<3.13.0a0'
-  url: https://conda.anaconda.org/conda-forge/noarch/pip-25.0.1-pyh8b19718_0.conda
+  url: https://conda.anaconda.org/conda-forge/noarch/pip-25.1.1-pyh8b19718_0.conda
   hash:
-    md5: 79b5c1440aedc5010f687048d9103628
-    sha256: 585940f09d87787f79f73ff5dff8eb2af8a67e5bec5eebf2f553cd26c840ba69
+    md5: 32d0781ace05105cc99af55d36cbec7c
+    sha256: ebfa591d39092b111b9ebb3210eb42251be6da89e26c823ee03e5e838655a43e
   category: main
   optional: false
 - name: platformdirs
