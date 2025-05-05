@@ -5,7 +5,7 @@ dependencies:
   # renovate: datasource=conda depName=conda-forge/python
   - python=3.12.4
   # renovate: datasource=conda depName=conda-forge/pip
-  - pip=25.0.1
+  - pip=25.1.1
   # renovate: datasource=conda depName=conda-forge/fastapi
   - fastapi=0.112.0
 variables:
